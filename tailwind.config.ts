@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				game: {
+					primary: 'hsl(var(--game-primary))',
+					secondary: 'hsl(var(--game-secondary))',
+					accent: 'hsl(var(--game-accent))',
+					success: 'hsl(var(--game-success))',
+					warning: 'hsl(var(--game-warning))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +91,38 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'spin': {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(360deg)' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--game-primary) / 0.3)' },
+					'50%': { boxShadow: '0 0 40px hsl(var(--game-primary) / 0.6)' }
+				},
+				'bounce-in': {
+					'0%': { transform: 'scale(0.3)', opacity: '0' },
+					'50%': { transform: 'scale(1.05)', opacity: '1' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'spin-slow': 'spin 3s linear infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+				'bounce-in': 'bounce-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+			},
+			backgroundImage: {
+				'gradient-main': 'var(--gradient-main)',
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-success': 'var(--gradient-success)',
+				'gradient-wheel': 'var(--gradient-wheel)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'prize': 'var(--shadow-prize)',
+				'wheel': 'var(--shadow-wheel)'
 			}
 		}
 	},
