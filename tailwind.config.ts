@@ -52,12 +52,15 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				game: {
-					primary: 'hsl(var(--game-primary))',
-					secondary: 'hsl(var(--game-secondary))',
-					accent: 'hsl(var(--game-accent))',
-					success: 'hsl(var(--game-success))',
-					warning: 'hsl(var(--game-warning))'
+				luxury: {
+					black: 'hsl(var(--luxury-black))',
+					charcoal: 'hsl(var(--luxury-charcoal))',
+					gray: 'hsl(var(--luxury-gray))',
+					silver: 'hsl(var(--luxury-silver))',
+					platinum: 'hsl(var(--luxury-platinum))',
+					pearl: 'hsl(var(--luxury-pearl))',
+					gold: 'hsl(var(--luxury-gold))',
+					'gold-dark': 'hsl(var(--luxury-gold-dark))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -100,29 +103,36 @@ export default {
 					'0%, 100%': { boxShadow: '0 0 20px hsl(var(--game-primary) / 0.3)' },
 					'50%': { boxShadow: '0 0 40px hsl(var(--game-primary) / 0.6)' }
 				},
-				'bounce-in': {
-					'0%': { transform: 'scale(0.3)', opacity: '0' },
-					'50%': { transform: 'scale(1.05)', opacity: '1' },
-					'100%': { transform: 'scale(1)', opacity: '1' }
+				'luxury-glow': {
+					'0%, 100%': { boxShadow: 'var(--shadow-elegant)' },
+					'50%': { boxShadow: 'var(--shadow-gold)' }
+				},
+				'subtle-float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-2px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'spin-slow': 'spin 3s linear infinite',
-				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
-				'bounce-in': 'bounce-in 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+				'luxury-glow': 'luxury-glow 3s ease-in-out infinite',
+				'subtle-float': 'subtle-float 4s ease-in-out infinite'
 			},
 			backgroundImage: {
 				'gradient-main': 'var(--gradient-main)',
 				'gradient-gold': 'var(--gradient-gold)',
-				'gradient-success': 'var(--gradient-success)',
-				'gradient-wheel': 'var(--gradient-wheel)'
+				'gradient-silver': 'var(--gradient-silver)',
+				'gradient-luxury': 'var(--gradient-luxury)'
 			},
 			boxShadow: {
-				'glow': 'var(--shadow-glow)',
-				'prize': 'var(--shadow-prize)',
+				'luxury': 'var(--shadow-luxury)',
+				'gold': 'var(--shadow-gold)',
+				'elegant': 'var(--shadow-elegant)',
 				'wheel': 'var(--shadow-wheel)'
+			},
+			fontFamily: {
+				'display': ['Playfair Display', 'serif'],
+				'sans': ['Inter', 'system-ui', 'sans-serif']
 			}
 		}
 	},
